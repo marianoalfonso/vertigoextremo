@@ -1,0 +1,113 @@
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/mixins";
+
+body { 
+    background-image: url($imgBackgroundOtherIndex);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+//nesting
+.navbar {
+    background-color: $navBackgroundColor;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 5px;
+        li {
+            display: inline;
+            padding: 10px;
+            margin-left: 10px;   
+            a {
+                color: $colorFontNavbar;
+                text-decoration: none;
+                font-size: 19px;
+
+                &:hover {
+                    background-color: $colorBackgroundHover;
+                    color: $navBarFontColorHover;
+                    border-radius: 10px;
+                    transition: $navBarTransitionSpeed;
+                    transform: scale(1.2);
+                }
+            }
+
+        }
+    }
+}
+
+.bienvenida {
+    color: $colorFontBienvenida;
+    font-size: x-large;
+    font-weight: bolder;
+    display: block;
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto;
+    padding: 50px;
+}
+
+footer{
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    // llamado a mixin
+    @include dimensionar(100%, 90px);
+    background-color: $footerBackgroundColor;
+    text-align: center;
+}
+
+.redes-sociales {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    a {
+        display: inline-block;
+        // llamado a mixin
+        @include dimensionar(30px, 30px);
+        text-align: center;
+        line-height: 30px;
+        margin: 15px;
+        &:hover {
+            transition: $transitionSpeed;
+            transform: scale(1.5);    
+        }
+    }
+}
+
+
+@media screen and (max-width: $mobileScreen) {
+    body {
+        background-image: url($imgBackgroundMobileIndex);
+        background-color: black;  
+    }
+
+    .bienvenida {
+        font-size: small;
+        display: block;
+        text-align: center;
+    }
+
+    .navbar {
+        ul {
+            li {
+                a {
+                    font-size: 15px;
+                }
+            }
+        } 
+    }  
+}
+    

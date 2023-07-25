@@ -1,0 +1,4 @@
+@mixin dimensionar($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}

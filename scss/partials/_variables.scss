@@ -1,0 +1,61 @@
+// global
+$darkMode: "yes";
+$colorFontNavbar: white;
+$navBarTransitionSpeed: 50ms;
+$colorBackgroundHover: white;
+$navBackgroundColor: white;
+$navBarFontColor: white;
+$navBarFontColorHover: white;
+$footerBackgroundColor: white;
+$colorFontBienvenida: white;
+
+// mobile
+// background images
+$imgBackgroundMobileIndex: '../assets/images/backgrounds/mobile/bak_index_mobile.jpeg';
+$imgBackgroundMobileEquipo: '../assets/images/backgrounds/mobile/bck_equipo_mobile.jpeg';
+$imgBackgroundMobileCircuitos: '../assets/images/backgrounds/mobile/bck_circuitos_mobile.jpeg';
+$imgBackgroundMobileMultimedia: '../assets/images/backgrounds/mobile/bck_multimedia_mobile.jpeg';
+$imgBackgroundMobileContacto: '../assets/images/backgrounds/mobile/';
+
+// other
+// background images
+$imgBackgroundOtherIndex: '../assets/images/backgrounds/other/bck_index_other.jpg';
+$imgBackgroundOtherEquipo: '../assets/images/backgrounds/other/bck_equipo_other.jpg';
+$imgBackgroundOtherCircuitos: '../assets/images/backgrounds/other/bck_circuitos_other.jpg';
+$imgBackgroundOtherMultimedia: '../assets/images/backgrounds/other/bck_multimedia_other.jpg';
+$imgBackgroundOtherContacto: '../assets/images/backgrounds/other/bck_contacto_other.jpg';
+
+// common
+$transitionSpeed: 300ms;
+$mobileScreen: 480px;
+
+// conditionals
+@if ($darkMode == "yes") {
+    // navbar
+    $navBackgroundColor:  rgb(38, 36, 36);
+    $colorFontNavbar: rgb(251, 247, 247);
+    $navBarFontColorHover: black;
+    $colorBackgroundHover: white;
+    // footer
+    $footerBackgroundColor: rgb(38, 36, 36);
+} @else {
+    // navbar
+    $navBackgroundColor:  white;
+    $colorFontNavbar: black;
+    $navBarFontColorHover: white;
+    $colorBackgroundHover: rgba(0, 0, 0, 0.603);
+    $colorFontBienvenida: black;
+    // footer
+    $footerBackgroundColor: white
+}
+
+// equipo
+$rowBackgroundColor: rgba(153, 59, 79, 0.384);
+
+// circuitos
+$tableWidth: 70%;
+
+// multimedia
+
+// contacto
+$formBackgroundColor: rgba(57, 12, 75, 0.438);

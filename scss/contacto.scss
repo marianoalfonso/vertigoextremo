@@ -1,0 +1,130 @@
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/mixins";
+
+body {
+    background-image: url($imgBackgroundOtherContacto);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+//nesting
+.navbar {
+    background-color: $navBackgroundColor;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 5px;
+        li {
+            display: inline;
+            padding: 10px;
+            margin-left: 10px;   
+            a {
+                color: $colorFontNavbar;
+                text-decoration: none;
+                font-size: 19px;
+
+                &:hover {
+                    background-color: $colorBackgroundHover;
+                    color: $navBarFontColorHover;
+                    border-radius: 10px;
+                    transition: $navBarTransitionSpeed;
+                    transform: scale(1.2);
+                }
+            }
+
+        }
+    }
+}
+
+footer{
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    // llamado a mixin
+    @include dimensionar(100%, 90px);
+    background-color: $footerBackgroundColor;
+    text-align: center;
+}
+
+.redes-sociales {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+        display: inline-block;
+        margin-right: 10px;
+    } 
+    a {
+        display: inline-block;
+        // llamado a mixin
+        @include dimensionar(30px, 30px);
+        text-align: center;
+        line-height: 30px;
+        margin: 15px;
+
+        &:hover {
+            transition: $transitionSpeed;
+            transform: scale(1.5);    
+        }
+    }
+}
+
+form {
+    padding: 20px;
+    width: 700px;
+    margin: 0 auto;
+    background-color: $formBackgroundColor;
+}
+
+.form-floating {
+    position: relative;
+
+    input {
+        &:focus {
+            background: #534e4e93;
+            color: white;
+        }
+    }
+
+    textarea {
+        &:focus {
+            background: #534e4e93;
+            color: white;
+        }   
+    }
+}
+
+.icono {
+    position: absolute;
+    top: calc(50%);
+    left: 1.25rem;
+}
+
+.form-floating label, .form-floating .form-control {
+    color: black;
+    left: .5rem;
+    padding-left: 3.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 10px;
+}
+
+/* media queries */
+@media screen and (max-width: $mobileScreen) {
+
+    body{
+        background-image: url($imgBackgroundMobileContacto);
+        background-color: black;
+    }
+
+}

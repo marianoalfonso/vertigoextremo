@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  background-image: url("../assets/images/backgrounds/other/bck_equipo_other.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: rgb(38, 36, 36);
+}
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+}
+.navbar ul li {
+  display: inline;
+  padding: 10px;
+  margin-left: 10px;
+}
+.navbar ul li a {
+  color: rgb(251, 247, 247);
+  text-decoration: none;
+  font-size: 19px;
+}
+.navbar ul li a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  transition: 50ms;
+  transform: scale(1.2);
+}
+
+footer {
+  display: inline;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background-color: rgb(38, 36, 36);
+  text-align: center;
+}
+
+.redes-sociales {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.redes-sociales li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.redes-sociales a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin: 15px;
+}
+.redes-sociales a:hover {
+  transition: 300ms;
+  transform: scale(1.5);
+}
+
+.row {
+  padding: 10px;
+  background-color: rgba(153, 59, 79, 0.384);
+  border-style: solid 2px white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.image-container {
+  background-color: rgba(153, 59, 79, 0.384);
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+}
+
+.description {
+  color: white;
+}
+
+.container p {
+  font-size: 26px;
+  color: white;
+}
+.container img:hover {
+  transition: 300ms;
+  transform: scale(1.05);
+}
+
+/* media queries */
+@media screen and (max-width: 480px) {
+  body {
+    background-image: url("../assets/images/backgrounds/mobile/bck_equipo_mobile.jpeg"); /*deshabilito la imagen*/
+    background-color: black;
+  }
+  .description {
+    font-size: 10px;
+  }
+}
+
+/*# sourceMappingURL=equipo.css.map */

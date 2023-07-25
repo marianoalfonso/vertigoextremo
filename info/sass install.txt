@@ -1,0 +1,6 @@
+npm init --yes
+npm install -g sass  (instala sass de forma global)
+saas --watch scss:css  (inicia el monitoreo)
+
+live sass compiler (si la pc no soporta node, puede usarse este plugin en vscode)
+

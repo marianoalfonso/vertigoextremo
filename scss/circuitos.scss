@@ -1,0 +1,116 @@
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/mixins";
+
+body {
+    background-image: url($imgBackgroundOtherCircuitos);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+//nesting
+.navbar {
+    background-color: $navBackgroundColor;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 5px;
+        li {
+            display: inline;
+            padding: 10px;
+            margin-left: 10px;   
+            a {
+                color: $colorFontNavbar;
+                text-decoration: none;
+                font-size: 19px;
+
+                &:hover {
+                    background-color: $colorBackgroundHover;
+                    color: $navBarFontColorHover;
+                    border-radius: 10px;
+                    transition: $navBarTransitionSpeed;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+footer{
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    // llamado a mixin
+    @include dimensionar(100%, 90px);
+    background-color: $footerBackgroundColor;
+    text-align: center;
+}
+
+.redes-sociales {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    a {
+        display: inline-block;
+        // llamado a mixin
+        @include dimensionar(30px, 30px);
+        text-align: center;
+        line-height: 30px;
+        margin: 15px;
+
+        &:hover {
+            transition: $transitionSpeed;
+            transform: scale(1.5);    
+        }
+    }
+}
+
+.circuito { 
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: $tableWidth;
+    margin: 0 auto;
+    background-color: #31050598;
+
+    th, td {
+        border: 2px solid #e6dee66b;
+        padding: 8px;
+        text-align: center;
+    }
+
+    img {
+        // llamado a mixin
+        @include dimensionar(120px, 60px);
+    }
+}
+
+th {
+    background-color: #310505;
+    text-align: center;
+}
+
+
+/* media queries */
+@media screen and (max-width: $mobileScreen) {
+
+    body{
+        background-image: url($imgBackgroundMobileCircuitos);
+        background-color: black;
+    }
+
+}

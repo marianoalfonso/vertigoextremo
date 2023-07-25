@@ -1,0 +1,125 @@
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/mixins";
+
+body{
+    background-image: url($imgBackgroundOtherEquipo);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+//nesting
+.navbar { 
+    background-color: $navBackgroundColor;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 5px;
+        li {
+            display: inline;
+            padding: 10px;
+            margin-left: 10px;   
+            a {
+                color: $colorFontNavbar;
+                text-decoration: none;
+                font-size: 19px;
+
+                &:hover {
+                    background-color: $colorBackgroundHover;
+                    color: $navBarFontColorHover;
+                    border-radius: 10px;
+                    transition: $navBarTransitionSpeed;
+                    transform: scale(1.2);
+                }
+            }
+
+        }
+    }
+}
+
+footer{
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    // llamado a mixin
+    @include dimensionar(100%, 90px);
+    background-color: $footerBackgroundColor;
+    text-align: center;
+}
+
+.redes-sociales {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    a {
+        display: inline-block;
+        // llamado a mixin
+        @include dimensionar(30px, 30px);
+        text-align: center;
+        line-height: 30px;
+        margin: 15px;
+        &:hover {
+            transition: $transitionSpeed;
+            transform: scale(1.5);    
+        }
+    }
+}
+
+.row{
+    padding: 10px;
+    background-color: $rowBackgroundColor;
+    border-style: solid 2px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-container {
+    background-color: $rowBackgroundColor;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+}
+
+.description {
+    color: white;
+}
+
+.container {
+    p {
+        font-size: 26px;
+        color: white;
+    }
+
+    img {
+        &:hover {
+        transition: $transitionSpeed;
+        transform: scale(1.05);
+        }
+    }
+}
+
+/* media queries */
+@media screen and (max-width: 480px) {
+
+    body{
+        background-image: url($imgBackgroundMobileEquipo); /*deshabilito la imagen*/
+        background-color: black;
+    }
+
+    .description {
+        font-size: 10px;
+    }
+
+}
